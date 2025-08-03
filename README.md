@@ -6,5 +6,7 @@
 
  That is why it uses simple language and simple questions, Linux is not only for the hardcore tech fans.
 
+https://whatsyourlinux.org/
+
  
  
