@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 20px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.question-card h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.question {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.answer-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 180px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a6fd8;
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #333;
+    border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+.progress-container {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    background: #667eea;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.result-card {
+    text-align: left;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.result-card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    word-break: break-word;
+}
+
+.btn-restart {
+    background: #28a745;
+    color: white;
+    margin-top: 20px;
+}
+
+.btn-restart:hover {
+    background: #218838;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.btn-back {
+    background: #6c757d;
+    color: white;
+    min-width: 120px;
+}
+
+.btn-back:hover {
+    background: #545b62;
+}
+
+.btn-back:disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.question-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-download {
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #218838 !important;
+    transform: translateY(-2px);
+}
+
+.result-card a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.github-footer {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 0.85em;
+    z-index: 999;
+}
+
+.github-footer p {
+    margin: 0;
+    color: #666;
+}
+
+.github-footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.github-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .question-card h1 {
+        font-size: 2em;
+    }
+    
+    .question {
+        font-size: 1.3em;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+    }
+    
+    .question-navigation {
+        order: -1;
+    }
+    
+    .result-card a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .btn {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .answer-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .github-footer {
+        position: static;
+        margin: 20px auto;
+        text-align: center;
+        width: fit-content;
+    }
+}

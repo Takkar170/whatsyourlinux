@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Perfect Linux Distribution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐧</text></svg>">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question-card">
+            <h1>Linux Distribution Finder</h1>
+            <h2 class="question">Do you want to see what's the best Linux distro for you?</h2>
+            <div class="answer-buttons">
+                <button class="btn btn-primary" onclick="startQuiz()">Yes, let's find out!</button>
+                <button class="btn btn-secondary" onclick="showInfo()">Tell me more first</button>
+            </div>
+        </div>
+        <div class="progress-container" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            <span class="progress-text" id="progressText">Question 1 of 7</span>
+        </div>
+    </div>
+    
+    <!-- GitHub Link Footer -->
+    <div class="github-footer">
+        <p>💻 Find the source code on <a href="https://github.com/Takkar170/whatsyourlinux" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

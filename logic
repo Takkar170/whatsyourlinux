@@ -1,0 +1,41 @@
+if Complete begginer + Daily Computing + Stable = Linux mint
+if Complete begginer + Daily Computing + Regular Updates = Fedora
+if Complete begginer + Daily Computing + Cutting Edge = Manjaro
+if Complete begginer + Gaming + Stable = Pop!_OS
+if Complete begginer + Gaming + Regular Updates = Nobara 
+if Complete begginer + Gaming + Cutting Edge = GarudaOS
+if Complete begginer + Server Hosting + Stable = Debian
+if Complete begginer + Server Hosting + Regular Updates = Ubuntu
+if Complete begginer + Server Hosting + Cutting Edge = OpenMediaVault
+if Some Experience + daily Computing + Stable = Mint
+if Some Experience + daily Computing + Regular = Fedora
+if Some Experience + daily Computing + Cutting edge = Arch
+if Some Experience + Gaming + Stable = Bazzite
+if Some Experience + Gaming + Regular = Nobara
+if Some Experience + Gaming + Cutting Edge = GarudaOS
+if Some Experience +  Server Hosting + Stable = Rocky Linux
+if Some Experience +  Server Hosting + Regular = Alma Linux
+if Some Experience +  Server Hosting + Cutting Edge = Fedora Server
+
+
+if use Windows + Older hardware or Less than 4gb + minimal customization = Cinnamon
+if use macOS + Older hardware or Less than 4gb + minimal customization= Cinnamon
+if use macOS + Older hardware or Less than 4gb + more customization= Xfce
+if use Windows + Older hardware or Less than 4gb + more customization= Xfce
+if use Windows + Newer hardware and More than 4gb + more customization= KDE
+if use Windows + Newer hardware and More than 4gb + minimal customization= KDE
+if use macOS + Newer hardware and More than 4gb + more customization= Gnome
+if use MacOS + Newer hardware and More than 4gb + minimal customization= Gnome
+if Distro = Bazzite + use Windows + Older hardware or Less than 4gb + minimal customization = KDE
+if Distro = Bazzite + use macOS + Older hardware or Less than 4gb + minimal customization= Gnome
+if Distro = Bazzite + use macOS + Older hardware or Less than 4gb + more customization= Gnome
+if Distro = Bazzite + use Windows + Older hardware or Less than 4gb + more customization= KDE
+if Distro = Nobara + use Windows + Older hardware or Less than 4gb + minimal customization = KDE
+if Distro = Nobara + use macOS + Older hardware or Less than 4gb + minimal customization= Gnome
+if Distro = Nobara + use macOS + Older hardware or Less than 4gb + more customization= Gnome
+if Distro = Nobara + use Windows + Older hardware or Less than 4gb + more customization= KDE
+if Distro = Pop!_OS = Cosmic DE
+if Distro = Linux mint + use Windows + Newer hardware and More than 4gb + minimal customization = Cinnamon
+if Distro = Linux mint + use macOS + Newer hardware and More than 4gb + minimal customization= Cinnamon
+if Distro = Linux mint + use macOS + Newer hardware and More than 4gb + more customization= Xfce
+if Distro = Linux mint + use Windows + Newer hardware and More than 4gb + more customization= Xfce
