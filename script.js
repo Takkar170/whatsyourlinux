@@ -29,7 +29,8 @@ const quizQuestions = [
         question: "How old is your hardware?",
         answers: [
             { text: "Newer (0-7 years old)", value: "newer" },
-            { text: "Older (7+ years old)", value: "older" }
+            { text: "Older (7-15 years old)", value: "older" },
+            { text: "Ancient (15+ Years)", value: "ancient" }
         ]
     },
     {
@@ -37,8 +38,8 @@ const quizQuestions = [
         question: "How much RAM does your system have?",
         answers: [
             { text: "Less than 4GB", value: "low-ram" },
-            { text: "4-8GB", value: "medium-ram" },
-            { text: "8GB or more", value: "high-ram" }
+            { text: "4GB", value: "medium-ram" },
+            { text: "More than 4GB", value: "high-ram" }
         ]
     },
     {
@@ -180,7 +181,9 @@ function getDownloadLink(distroName) {
         "Rocky Linux": "https://rockylinux.org/download",
         "AlmaLinux": "https://almalinux.org/get-almalinux/",
         "Fedora Server": "https://fedoraproject.org/server/download/",
-        "Ubuntu": "https://ubuntu.com/download/desktop"
+        "Ubuntu": "https://ubuntu.com/download/desktop",
+        "Puppy Linux": "https://puppylinux-woof-ce.github.io/",
+        "Tiny Core Linux": "http://tinycorelinux.net/downloads.html"
     };
     
     return downloadLinks[distroName] || "https://distrowatch.com/";
@@ -202,7 +205,9 @@ function getInstallGuideLink(distroName) {
         "Rocky Linux": "https://docs.rockylinux.org/guides/installation/",
         "AlmaLinux": "https://wiki.almalinux.org/documentation/installation-guide.html",
         "Fedora Server": "https://docs.fedoraproject.org/en-US/fedora-server/installation/",
-        "Ubuntu": "https://ubuntu.com/tutorials/install-ubuntu-desktop"
+        "Ubuntu": "https://ubuntu.com/tutorials/install-ubuntu-desktop",
+        "Puppy Linux": "https://puppylinux-woof-ce.github.io/woof-ce/woof-ce/WikiPages/HOWTO%20Install%20Puppy%20to%20Hard%20Drive.html",
+        "Tiny Core Linux": "http://wiki.tinycorelinux.net/wiki:installation"
     };
     
     return installGuides[distroName] || "https://www.linux.org/pages/download/";
@@ -326,6 +331,38 @@ function calculateRecommendation() {
     const ram = answers[5];
     const customization = answers[6];
     const updates = answers[7];
+    
+    if (hardwareAge === 'ancient') {
+        if (experience === 'beginner') {
+            return {
+                name: "Puppy Linux",
+                distroType: "Ultra-Lightweight",
+                desktopEnvironment: "JWM/Openbox",
+                reasons: [
+                    "Designed specifically for very old hardware",
+                    "Runs entirely from RAM for maximum speed",
+                    "Only needs 256MB RAM and works on Pentium III",
+                    "Extremely user-friendly for beginners"
+                ],
+                description: "Puppy Linux is perfect for ancient hardware, running entirely from RAM and providing a complete desktop experience on machines from the early 2000s.",
+                alternatives: ["antiX Linux", "Q4OS Trinity"]
+            };
+        } else if (experience === 'intermediate') {
+            return {
+                name: "Tiny Core Linux",
+                distroType: "Micro Distribution",
+                desktopEnvironment: "FLWM/FLTK",
+                reasons: [
+                    "Incredibly tiny at just 16MB",
+                    "Blazing fast boot times on old hardware",
+                    "Modular design - add only what you need",
+                    "Perfect for users who want maximum control"
+                ],
+                description: "Tiny Core Linux offers ultimate performance on ancient hardware with its minimalist approach and modular design system.",
+                alternatives: ["Puppy Linux", "antiX Linux"]
+            };
+        }
+    }
     
     function getGeneralDesktopEnvironment() {
         const ramLow = ram === 'low-ram';
