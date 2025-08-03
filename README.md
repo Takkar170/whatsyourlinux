@@ -1,4 +1,7 @@
-# whatsyourlinux
+# What linux distro should i use?
+
+Whats your linux distro is for you!
+
  I made a super simple Linux distribution finder quiz that any beginner can use! 🐧 
 
  The point of this quiz is to give beginners a Linux distro that feels familiar to what they are currently using,
